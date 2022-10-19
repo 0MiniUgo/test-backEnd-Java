@@ -30,7 +30,7 @@ public class LigaDaJusticaFromXML {
         return response;
     }
 
-    public static void LigaDaJustica_StringToList(){
+    public static List<String> LigaDaJustica_StringToList(){
 
         String str = LigaDaJustica_XmlToString();
 
@@ -44,6 +44,6 @@ public class LigaDaJusticaFromXML {
             }
         }
 
-        System.out.println(list);
+        return list;
     }
 }

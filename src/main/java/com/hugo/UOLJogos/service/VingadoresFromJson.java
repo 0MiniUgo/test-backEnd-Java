@@ -31,7 +31,7 @@ public class VingadoresFromJson {
         return response;
     }
 
-    public static void Vingadores_StringToList(){
+    public static List<String> Vingadores_StringToList(){
 
         String str = Vingadores_JsonToString();
 
@@ -44,6 +44,6 @@ public class VingadoresFromJson {
                 list.add(matcher.group(i));
             }
         }
-        System.out.println(list);
+        return list;
     }
 }
