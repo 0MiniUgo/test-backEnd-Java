@@ -3,6 +3,7 @@ package com.hugo.UOLJogos.service;
 import com.hugo.UOLJogos.model.Jogador;
 import com.hugo.UOLJogos.model.JogadorPostRequestBody;
 import com.hugo.UOLJogos.model.JogadorPutRequestBody;
+import com.hugo.UOLJogos.model.enums.ContentType;
 import com.hugo.UOLJogos.model.enums.Grupo;
 import com.hugo.UOLJogos.repository.JogadorRepository;
 import com.hugo.UOLJogos.service.exceptions.DatabaseUniqueException;
@@ -73,10 +74,10 @@ public class JogadorService {
         List<String> codinomes = new ArrayList<>();
 
         if(jogador.getGrupo() == Grupo.VINGADORES){
-            codinomes = VingadoresFromJson.Vingadores_StringToList();
+            codinomes = GetCodinomeFromWeb.StringToList(ContentType.JSON);
 
         } else if (jogador.getGrupo() == Grupo.LIGA_DA_JUSTICA) {
-            codinomes = LigaDaJusticaFromXML.LigaDaJustica_StringToList();
+            codinomes = GetCodinomeFromWeb.StringToList(ContentType.XML);
         }
 
         boolean existeNoBanco = true;
