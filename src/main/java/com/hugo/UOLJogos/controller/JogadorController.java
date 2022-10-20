@@ -12,7 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("jogadores")
+@RequestMapping("/api/jogadores")
 public class JogadorController {
 
     private JogadorService service;
